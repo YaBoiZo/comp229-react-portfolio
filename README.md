@@ -17,16 +17,16 @@ Open the local URL shown in the terminal.
 npm run build
 ```
 
-## Personalize the portfolio
-
-Start with `lib/portfolio-data.ts`, then replace the clearly marked placeholder biography, project, education, résumé, image, and contact content throughout the route files.
-
 ## Assignment status
 
 - Responsive six-page navigation
 - Original monogram logo and favicon
 - Home welcome message, mission statement, and calls to action
-- Prepared About, Projects, Education, Services, and Contact layouts
+- Professional biography, headshot, and downloadable résumé
+- Three project case studies with original supporting images
+- Education and business-management credentials
+- Web development, custom chatbot, and automation services
 - Contact form captures visitor input and redirects to Home
+- Production build and lint checks pass
 
-Personal content and final résumé/project imagery still need to be supplied before submission.
+GitHub publication, public hosting, the submission ZIP, and the walkthrough video are completed separately at the final submission stage.

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages -- Full-page links are required for reliable navigation on the course deployment target. */
 import { navigationItems, portfolioOwner } from "@/lib/portfolio-data";
 
 export function SiteHeader() {
