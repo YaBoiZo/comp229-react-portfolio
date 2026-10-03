@@ -100,12 +100,19 @@ h1, h2, p { margin-top: 0; }
 .prose-card p { margin-bottom: 24px; color: var(--ink-soft); font-size: 1.08rem; }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding-bottom: 100px; }
 .project-card, .service-card { padding: 18px; border: 1px solid var(--line); border-radius: 20px; background: var(--white); }
-.project-card__visual { display: grid; height: 240px; margin-bottom: 26px; place-items: end start; padding: 22px; border-radius: 13px; background: linear-gradient(135deg, var(--ink), #175a68); color: var(--mint); }
-.project-card:nth-child(2) .project-card__visual { background: linear-gradient(135deg, #18473e, #38a88e); }
-.project-card:nth-child(3) .project-card__visual { background: linear-gradient(135deg, #5e4318, var(--sun)); color: var(--ink); }
-.project-card__visual span { font-size: 2rem; font-weight: 800; }
+.project-card { display: flex; flex-direction: column; }
+.project-card__visual { position: relative; height: 240px; margin-bottom: 26px; overflow: hidden; border-radius: 13px; background: var(--ink); color: var(--white); }
+.project-card__visual::after { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 48%, rgb(7 27 36 / 78%)); content: ""; }
+.project-card__visual img { object-fit: cover; }
+.project-card__visual span { position: absolute; z-index: 2; bottom: 18px; left: 20px; font-size: 2rem; font-weight: 800; }
 .project-card h2, .service-card h2 { font-size: 1.45rem; }
-.project-card > p:last-child, .service-card p { color: var(--muted); }
+.project-card > p:not(.eyebrow), .service-card p { color: var(--muted); }
+.project-card__details { display: grid; gap: 14px; margin: 18px 0 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+.project-card__details div { display: grid; gap: 4px; }
+.project-card__details dt { color: var(--mint-dark); font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.project-card__details dd { margin: 0; color: var(--muted); font-size: 0.92rem; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin: auto 0 0; padding: 0; list-style: none; }
+.tag-list li { padding: 5px 9px; border-radius: 999px; background: var(--paper); color: var(--ink-soft); font-size: 0.75rem; font-weight: 700; }
 .service-card { min-height: 270px; padding: 30px; }
 .service-card svg { width: 34px; height: 34px; margin-bottom: 65px; color: var(--mint-dark); }
 .timeline { padding-bottom: 100px; border-top: 1px solid var(--line); }
