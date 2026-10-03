@@ -1,0 +1,43 @@
+import Link from "next/link";
+import { portfolioOwner } from "@/lib/portfolio-data";
+
+const focusAreas = ["Web development", "Accessible interfaces", "Reliable code"];
+
+export default function Home() {
+  return (
+    <main>
+      <section className="hero">
+        <div className="hero__content">
+          <p className="eyebrow">Hello, I&apos;m {portfolioOwner.name}</p>
+          <h1>
+            Building useful digital experiences with <em>care and curiosity.</em>
+          </h1>
+          <p className="hero__lede">
+            I&apos;m a {portfolioOwner.role.toLowerCase()} in {portfolioOwner.location},
+            focused on turning ideas into clear, responsive, human-centred products.
+          </p>
+          <div className="button-row">
+            <Link className="button button--primary" href="/about">About me</Link>
+            <Link className="button button--secondary" href="/projects">View projects</Link>
+          </div>
+        </div>
+
+        <aside className="hero-card" aria-label="Current focus">
+          <span className="hero-card__number">01</span>
+          <p className="hero-card__label">Current focus</p>
+          <h2>Learning by building.</h2>
+          <ul>
+            {focusAreas.map((area) => <li key={area}>{area}</li>)}
+          </ul>
+          <div className="hero-card__orbit" aria-hidden="true"><span /></div>
+        </aside>
+      </section>
+
+      <section className="mission" aria-labelledby="mission-title">
+        <p className="eyebrow">My mission</p>
+        <blockquote id="mission-title">“{portfolioOwner.mission}”</blockquote>
+        <Link href="/contact">Start a conversation</Link>
+      </section>
+    </main>
+  );
+}
