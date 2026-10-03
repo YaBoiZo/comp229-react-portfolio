@@ -1,16 +1,13 @@
 "use client";
 
 import { FormEvent } from "react";
-import { useRouter } from "next/navigation";
 
 export function ContactForm() {
-  const router = useRouter();
-
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     sessionStorage.setItem("portfolioContact", JSON.stringify(Object.fromEntries(formData)));
-    router.push("/?message=received");
+    window.location.assign("/?message=received");
   }
 
   return (

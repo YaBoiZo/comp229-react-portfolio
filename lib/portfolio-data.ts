@@ -4,7 +4,7 @@ export const portfolioOwner = {
   preferredName: "Zo",
   role: "Web Developer · AI Consultant · AI Implementation Specialist",
   location: "Toronto, Ontario",
-  email: "your.email@example.com",
+  email: "zsyed26@my.centennialcollege.ca",
   mission:
     "I build thoughtful, accessible web experiences that turn real problems into simple, dependable products.",
   biography: [

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Image from "next/image";
 import { PageIntro } from "@/components/page-intro";
 import { portfolioOwner } from "@/lib/portfolio-data";
 
@@ -13,13 +13,21 @@ export default function AboutPage() {
         description={`${portfolioOwner.role} based in ${portfolioOwner.location}.`}
       />
       <section className="split-panel">
-        <div className="portrait-placeholder" aria-label="Professional portrait placeholder">
-          <span>{portfolioOwner.name.split(" ").map((part) => part[0]).join("").slice(0, 2)}</span>
-          <small>Professional photo coming soon</small>
+        <div className="portrait-frame">
+          <Image
+            src="/assets/zohaib-syed-headshot.png"
+            alt="Professional headshot of Zohaib Syed"
+            fill
+            priority
+            sizes="(max-width: 820px) 100vw, 40vw"
+          />
         </div>
         <div className="prose-card">
           {portfolioOwner.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-          <Link className="button button--secondary" href="/contact">Contact me</Link>
+          <div className="button-row">
+            <a className="button button--primary" href="/assets/zohaib-syed-resume.pdf" target="_blank" rel="noreferrer">View résumé</a>
+            <a className="button button--secondary" href="/contact">Contact me</a>
+          </div>
         </div>
       </section>
     </main>

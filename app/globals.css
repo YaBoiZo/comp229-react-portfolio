@@ -94,9 +94,8 @@ h1, h2, p { margin-top: 0; }
 .page-intro h1 { font-size: clamp(3rem, 6vw, 5.7rem); }
 .page-intro__copy { max-width: 720px; color: var(--ink-soft); font-size: 1.18rem; }
 .split-panel, .contact-layout { display: grid; grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.2fr); gap: 28px; padding-bottom: 100px; }
-.portrait-placeholder { display: grid; min-height: 440px; place-items: center; align-content: center; gap: 16px; border-radius: 26px 26px 26px 6px; background: var(--ink); color: var(--white); }
-.portrait-placeholder span { display: grid; width: 120px; height: 120px; place-items: center; border: 2px solid var(--mint); border-radius: 50%; color: var(--mint); font-size: 2rem; font-weight: 800; }
-.portrait-placeholder small { color: #b4c4c8; font-weight: 700; }
+.portrait-frame { position: relative; min-height: 520px; overflow: hidden; border-radius: 26px 26px 26px 6px; background: var(--ink); box-shadow: 10px 10px 0 var(--sun); }
+.portrait-frame img { object-fit: cover; object-position: center 24%; }
 .prose-card, .contact-form { padding: clamp(28px, 5vw, 58px); border: 1px solid var(--line); border-radius: 26px 6px 26px 26px; background: var(--white); }
 .prose-card p { margin-bottom: 24px; color: var(--ink-soft); font-size: 1.08rem; }
 .card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding-bottom: 100px; }

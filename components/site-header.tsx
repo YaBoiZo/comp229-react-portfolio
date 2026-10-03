@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { navigationItems, portfolioOwner } from "@/lib/portfolio-data";
 
 export function SiteHeader() {
@@ -12,17 +11,17 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link className="brand" href="/" aria-label="Portfolio home">
+        <a className="brand" href="/" aria-label="Portfolio home">
           <span className="brand__mark" aria-hidden="true">{initials}</span>
           <span className="brand__text">
             {portfolioOwner.name}
             <small>Portfolio</small>
           </span>
-        </Link>
+        </a>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navigationItems.map((item) => (
-            <Link key={item.href} href={item.href}>{item.label}</Link>
+            <a key={item.href} href={item.href}>{item.label}</a>
           ))}
         </nav>
 
@@ -30,7 +29,7 @@ export function SiteHeader() {
           <summary aria-label="Open navigation">Menu</summary>
           <nav aria-label="Mobile navigation">
             {navigationItems.map((item) => (
-              <Link key={item.href} href={item.href}>{item.label}</Link>
+              <a key={item.href} href={item.href}>{item.label}</a>
             ))}
           </nav>
         </details>

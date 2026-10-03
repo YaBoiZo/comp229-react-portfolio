@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { portfolioOwner } from "@/lib/portfolio-data";
 
 const focusAreas = ["Web development", "Accessible interfaces", "Reliable code"];
@@ -17,8 +16,8 @@ export default function Home() {
             exploring how thoughtful development and AI implementation can turn ideas into useful products.
           </p>
           <div className="button-row">
-            <Link className="button button--primary" href="/about">About me</Link>
-            <Link className="button button--secondary" href="/projects">View projects</Link>
+            <a className="button button--primary" href="/about">About me</a>
+            <a className="button button--secondary" href="/projects">View projects</a>
           </div>
         </div>
 
@@ -36,7 +35,7 @@ export default function Home() {
       <section className="mission" aria-labelledby="mission-title">
         <p className="eyebrow">My mission</p>
         <blockquote id="mission-title">“{portfolioOwner.mission}”</blockquote>
-        <Link href="/contact">Start a conversation</Link>
+        <a href="/contact">Start a conversation</a>
       </section>
     </main>
   );
