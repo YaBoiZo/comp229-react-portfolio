@@ -1,6 +1,6 @@
 # COMP229 React Portfolio
 
-Personal portfolio website created for COMP229 Assignment 1. The application uses React and provides six routes: Home, About, Projects, Education, Services, and Contact.
+Zohaib Syed's personal portfolio website, created for COMP229 Assignment 1. The application uses React and provides six routes: Home, About, Projects, Education, Services, and Contact.
 
 ## Run locally
 

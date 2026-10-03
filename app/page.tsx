@@ -8,13 +8,13 @@ export default function Home() {
     <main>
       <section className="hero">
         <div className="hero__content">
-          <p className="eyebrow">Hello, I&apos;m {portfolioOwner.name}</p>
+          <p className="eyebrow">Hello, I&apos;m {portfolioOwner.preferredName}</p>
           <h1>
             Building useful digital experiences with <em>care and curiosity.</em>
           </h1>
           <p className="hero__lede">
-            I&apos;m a {portfolioOwner.role.toLowerCase()} in {portfolioOwner.location},
-            focused on turning ideas into clear, responsive, human-centred products.
+            I&apos;m a Toronto-based web developer and software engineering student,
+            exploring how thoughtful development and AI implementation can turn ideas into useful products.
           </p>
           <div className="button-row">
             <Link className="button button--primary" href="/about">About me</Link>

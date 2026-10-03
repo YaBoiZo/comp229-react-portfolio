@@ -5,11 +5,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name | Software Engineering Portfolio",
-    template: "%s | Your Name",
+    default: "Zohaib Syed | Web Developer & AI Consultant",
+    template: "%s | Zohaib Syed",
   },
   description:
-    "A software engineering portfolio featuring projects, education, services, and contact information.",
+    "Zohaib Syed's software engineering portfolio featuring web development, AI consulting, projects, education, and services.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
