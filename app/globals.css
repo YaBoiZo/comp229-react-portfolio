@@ -120,6 +120,7 @@ h1, h2, p { margin-top: 0; }
 .timeline span { color: var(--mint-dark); font-weight: 800; }
 .timeline h2 { margin-bottom: 8px; font-size: 1.6rem; }
 .timeline p { color: var(--muted); }
+.timeline .timeline__status { margin-bottom: 8px; color: var(--mint-dark); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .contact-panel { padding: 40px; border-radius: 26px 6px 26px 26px; background: var(--ink); color: var(--white); }
 .contact-panel h2 { margin: 40px 0 85px; font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1; }
 .contact-panel a { color: var(--mint); font-weight: 800; }
