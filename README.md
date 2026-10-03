@@ -2,6 +2,11 @@
 
 Zohaib Syed's personal portfolio website, created for COMP229 Assignment 1. The application uses React and provides six routes: Home, About, Projects, Education, Services, and Contact.
 
+## Links
+
+- Live portfolio: https://zohaib-syed-portfolio.vercel.app
+- GitHub repository: https://github.com/YaBoiZo/comp229-react-portfolio
+
 ## Run locally
 
 ```bash
@@ -29,4 +34,4 @@ npm run build
 - Contact form captures visitor input and redirects to Home
 - Production build and lint checks pass
 
-GitHub publication, public hosting, the submission ZIP, and the walkthrough video are completed separately at the final submission stage.
+The source is version controlled with Git and published to GitHub. The production portfolio is hosted publicly on Vercel.
