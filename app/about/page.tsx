@@ -25,7 +25,13 @@ export default function AboutPage() {
         <div className="prose-card">
           {portfolioOwner.biography.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           <div className="button-row">
-            <a className="button button--primary" href="/assets/zohaib-syed-resume.pdf" target="_blank" rel="noreferrer">View résumé</a>
+            <a
+              className="button button--primary"
+              href="/assets/zohaib-syed-resume.pdf"
+              download="Zohaib-Syed-Resume.pdf"
+            >
+              Download résumé (PDF)
+            </a>
             <a className="button button--secondary" href="/contact">Contact me</a>
           </div>
         </div>
