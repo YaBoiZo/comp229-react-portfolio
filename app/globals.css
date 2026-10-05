@@ -40,20 +40,17 @@ button, input, textarea { font: inherit; }
   margin-inline: auto;
 }
 .site-header__inner { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 800; line-height: 1.05; }
+.brand { display: inline-flex; align-items: center; gap: 13px; line-height: 1; }
 .brand__mark {
-  display: grid;
-  width: 43px;
-  height: 43px;
-  place-items: center;
-  border-radius: 13px 13px 13px 3px;
-  background: var(--ink);
-  color: var(--mint);
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  box-shadow: 5px 5px 0 var(--sun);
+  display: block;
+  width: 52px;
+  height: 52px;
+  filter: drop-shadow(4px 4px 0 var(--sun));
+  transition: transform 180ms ease, filter 180ms ease;
 }
-.brand__text small { display: block; margin-top: 5px; color: var(--muted); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.brand:hover .brand__mark { transform: translate(-1px, -1px); filter: drop-shadow(6px 6px 0 var(--sun)); }
+.brand__text strong { display: block; font-size: 1rem; font-weight: 900; letter-spacing: 0.025em; text-transform: uppercase; }
+.brand__text small { display: block; margin-top: 7px; color: var(--mint-dark); font-size: 0.63rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
 .desktop-nav { display: flex; align-items: center; gap: clamp(18px, 2.5vw, 34px); }
 .desktop-nav a { position: relative; font-size: 0.91rem; font-weight: 700; }
 .desktop-nav a::after { position: absolute; right: 0; bottom: -8px; left: 0; height: 2px; background: var(--mint-dark); content: ""; transform: scaleX(0); transition: transform 180ms ease; }
@@ -149,7 +146,10 @@ h1, h2, p { margin-top: 0; }
 
 @media (max-width: 560px) {
   .site-header__inner, .page-shell, .site-footer { width: min(100% - 28px, 1180px); }
-  .brand__text { display: none; }
+  .brand { gap: 10px; }
+  .brand__mark { width: 46px; height: 46px; }
+  .brand__text strong { font-size: 0.83rem; }
+  .brand__text small { margin-top: 5px; font-size: 0.52rem; letter-spacing: 0.09em; }
   .hero { gap: 44px; padding-top: 54px; }
   .hero h1, .page-intro h1 { letter-spacing: -0.045em; }
   .hero-card { padding: 28px; box-shadow: 8px 8px 0 var(--sun); }

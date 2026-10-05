@@ -1,22 +1,23 @@
 /* eslint-disable @next/next/no-html-link-for-pages -- Full-page links are required for reliable navigation on the course deployment target. */
+import Image from "next/image";
 import { navigationItems, portfolioOwner } from "@/lib/portfolio-data";
 
 export function SiteHeader() {
-  const initials = portfolioOwner.name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
-
   return (
     <header className="site-header">
       <div className="site-header__inner">
         <a className="brand" href="/" aria-label="Portfolio home">
-          <span className="brand__mark" aria-hidden="true">{initials}</span>
+          <Image
+            className="brand__mark"
+            src="/logo-mark.svg"
+            alt=""
+            width="52"
+            height="52"
+            aria-hidden="true"
+          />
           <span className="brand__text">
-            {portfolioOwner.name}
-            <small>Portfolio</small>
+            <strong>{portfolioOwner.name}</strong>
+            <small>Web Development <span aria-hidden="true">·</span> AI</small>
           </span>
         </a>
 
